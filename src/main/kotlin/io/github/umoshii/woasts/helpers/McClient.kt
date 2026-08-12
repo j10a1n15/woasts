@@ -1,0 +1,15 @@
+package io.github.umoshii.woasts.helpers
+
+import net.minecraft.client.Minecraft
+
+/*
+    Implementation based on @SkyblockAPI/SkyblockAPI
+    https://github.com/SkyblockAPI/SkyblockAPI/blob/4.0/src/main/kotlin/tech/thatgravyboat/skyblockapi/helpers/McClient.kt
+
+    Licensed under MIT License, see CREDITS.md for more
+*/
+
+object McClient {
+    val instance: Minecraft
+        get() = Minecraft.getInstance()
+}

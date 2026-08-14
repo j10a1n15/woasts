@@ -1,6 +1,7 @@
 package io.github.umoshii.woasts.helpers
 
 import net.minecraft.client.Minecraft
+import net.minecraft.client.gui.Font
 
 /*
     Implementation based on @SkyblockAPI/SkyblockAPI
@@ -12,4 +13,6 @@ import net.minecraft.client.Minecraft
 object McClient {
     val instance: Minecraft
         get() = Minecraft.getInstance()
+
+    val font: Font = instance.font
 }

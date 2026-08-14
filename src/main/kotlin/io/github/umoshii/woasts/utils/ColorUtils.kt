@@ -14,6 +14,6 @@ object ColorUtils {
     }
 
     enum class Constants(val hex: Int) {
-        WHITE(ColorUtils.hexToArgb("#FFFFFFFF"))
+        WHITE(hexToArgb("#FFFFFFFF"))
     }
 }

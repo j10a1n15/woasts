@@ -14,6 +14,8 @@ base.archivesName = property("mod.id") as String
 repositories {
 	// Add repositories to retrieve artifacts from in here.
 	maven("https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1")
+	maven("https://maven.shedaniel.me/")
+	maven("https://maven.terraformersmc.com/") { name = "Terraformers" }
 }
 
 dependencies {
@@ -29,6 +31,8 @@ dependencies {
 
 	// dependent deps
 	implementation("net.fabricmc.fabric-api:fabric-api:${property("deps.fabric_api")}")
+	implementation("me.shedaniel.cloth:cloth-config-fabric:${property("deps.cloth_config")}")
+	implementation("com.terraformersmc:modmenu:${property("deps.modmenu")}")
 }
 
 tasks.processResources {
@@ -50,7 +54,7 @@ tasks.processResources {
 		register("mod_desc", "mod.desc")
 
 		// deps
-		// ...
+		register("deps_cloth_config", "deps.cloth_config")
 	}
 
 	filesMatching("fabric.mod.json") { expand(props) }

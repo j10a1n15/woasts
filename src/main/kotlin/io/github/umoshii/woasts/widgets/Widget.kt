@@ -1,6 +1,5 @@
 package io.github.umoshii.woasts.widgets
 
-import io.github.umoshii.woasts.Woasts
 import io.github.umoshii.woasts.helpers.McClient
 import io.github.umoshii.woasts.utils.ColorUtils
 import io.github.umoshii.woasts.utils.FontUtils

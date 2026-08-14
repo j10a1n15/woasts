@@ -31,6 +31,13 @@
 				"value": "io.github.umoshii.woasts.WoastsClient",
 				"adapter": "kotlin"
 			}
+		],
+
+		"modmenu": [
+			{
+				"value": "io.github.umoshii.woasts.integration.ModMenuIntegration",
+				"adapter": "kotlin"
+			}
 		]
 	},
 
@@ -44,6 +51,11 @@
 		"java": ">=25",
 
 		"fabric-api": "*",
-		"fabric-language-kotlin": "*"
+		"fabric-language-kotlin": "*",
+		"cloth-config": "${deps_cloth_config}"
+	},
+
+	"suggests": {
+		"modmenu": "*"
 	}
 }

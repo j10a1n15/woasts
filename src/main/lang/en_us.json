@@ -1,0 +1,16 @@
+{
+    "text": {
+        "autoconfig": {
+            "woasts": {
+                "title": "Woasts!",
+
+                "option": {
+                    "mainSwitch": {
+                        "@": "Main Switch",
+                        "@Tooltip": "Controls the rendering of all widgets."
+                    }
+                }
+            }
+        }
+    }
+}

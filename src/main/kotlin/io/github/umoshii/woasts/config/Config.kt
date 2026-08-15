@@ -1,6 +1,7 @@
 package io.github.umoshii.woasts.config
 
 import io.github.umoshii.woasts.Woasts
+import io.github.umoshii.woasts.config.sections.PingConfigSection
 import me.shedaniel.autoconfig.ConfigData
 import me.shedaniel.autoconfig.annotation.Config
 import me.shedaniel.autoconfig.annotation.ConfigEntry
@@ -17,12 +18,25 @@ class Config : ConfigData {
         override fun getKey(): String = "text.autoconfig.woasts.option.renderCorner.$key"
     }
 
-    var margin: Int = 5
-    var spacing: Int = 3
+    @ConfigEntry.Gui.Tooltip
+    var mainSwitch: Boolean = true
 
-    var wrap: Int = 3
-    var wrapSpacing: Int = 3
-
+    @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Gui.EnumHandler(option = ConfigEntry.Gui.EnumHandler.EnumDisplayOption.BUTTON)
     var renderCorner: RenderCorner = RenderCorner.UP_LEFT
+
+    @ConfigEntry.Gui.Tooltip
+    var margin: Int = 5
+
+    @ConfigEntry.Gui.Tooltip
+    var spacing: Int = 3
+
+    @ConfigEntry.Gui.Tooltip
+    var wrap: Int = 3
+
+    @ConfigEntry.Gui.Tooltip
+    var wrapSpacing: Int = 3
+
+    @ConfigEntry.Gui.CollapsibleObject
+    var pingConfig: PingConfigSection = PingConfigSection()
 }

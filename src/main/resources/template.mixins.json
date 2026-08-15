@@ -3,7 +3,9 @@
 	"package": "io.github.umoshii.woasts.mixin",
 	"compatibilityLevel": "JAVA_25",
 
-	"mixins": [],
+	"mixins": [
+		"ClientPacketListenerMixin"
+	],
 
 	"injectors": {
 		"defaultRequire": 1

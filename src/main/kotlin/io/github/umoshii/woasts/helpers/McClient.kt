@@ -3,6 +3,7 @@ package io.github.umoshii.woasts.helpers
 import com.mojang.blaze3d.platform.Window
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.Font
+import net.minecraft.client.multiplayer.ClientPacketListener
 
 /*
     Implementation based on @SkyblockAPI/SkyblockAPI
@@ -15,6 +16,12 @@ object McClient {
     val instance: Minecraft
         get() = Minecraft.getInstance()
 
-    val font: Font = instance.font
-    val window: Window = instance.window
+    val font: Font
+        get() = instance.font
+
+    val window: Window
+        get() = instance.window
+
+    val connection: ClientPacketListener?
+        get() = instance.connection
 }

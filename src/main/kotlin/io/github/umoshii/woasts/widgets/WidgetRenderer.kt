@@ -2,6 +2,8 @@ package io.github.umoshii.woasts.widgets
 
 import io.github.umoshii.woasts.Woasts
 import io.github.umoshii.woasts.WoastsClient
+import io.github.umoshii.woasts.config.Config
+import io.github.umoshii.woasts.helpers.McClient
 import io.github.umoshii.woasts.widgets.implementation.TestWidget
 import net.fabricmc.fabric.api.client.rendering.v1.hud.HudElementRegistry
 import net.fabricmc.fabric.api.client.rendering.v1.hud.VanillaHudElements
@@ -9,11 +11,88 @@ import net.minecraft.client.DeltaTracker
 import net.minecraft.client.gui.GuiGraphicsExtractor
 
 object WidgetRenderer {
-    private val widgets: List<Widget> = listOf(TestWidget)
+    private val widgets: List<Widget> = listOf(TestWidget, TestWidget, TestWidget, TestWidget)
 
+    // this is a static value, so it's justifiable to put it here like this
+    private const val CONTAINER_HEIGHT: Int = 14
+
+    @Suppress("DuplicatedCode")
     private fun render(graphics: GuiGraphicsExtractor, tickCounter: DeltaTracker) {
-        widgets.forEach { widget ->
-            widget.render(graphics, tickCounter, WoastsClient.config.margin, WoastsClient.config.margin)
+        val enabled = widgets.filterNot { !it.isEnabled }
+        if (enabled.isEmpty()) return
+
+        when(WoastsClient.config.renderCorner) {
+            Config.RenderCorner.UP_LEFT -> {
+                var x = WoastsClient.config.margin
+                var y = WoastsClient.config.margin
+
+                val lines = enabled.chunked(WoastsClient.config.wrap)
+                lines.forEach { line ->
+                    line.forEach { widget ->
+                        widget.render(graphics, tickCounter, x, y)
+                        x += widget.containerWidth + WoastsClient.config.spacing
+                    }
+
+                    x = WoastsClient.config.margin
+                    y += CONTAINER_HEIGHT + WoastsClient.config.wrapSpacing
+                }
+            }
+
+            Config.RenderCorner.UP_RIGHT -> {
+                var x = McClient.window.guiScaledWidth - WoastsClient.config.margin
+                var y = WoastsClient.config.margin
+
+                val lines = enabled.chunked(WoastsClient.config.wrap)
+                lines.forEach { line ->
+                    line.forEachIndexed { index, widget ->
+                        x -= when(index) {
+                            0 -> widget.containerWidth
+                            else -> widget.containerWidth + WoastsClient.config.spacing
+                        }
+
+                        widget.render(graphics, tickCounter, x, y)
+                    }
+
+                    x = McClient.window.guiScaledWidth - WoastsClient.config.margin
+                    y += CONTAINER_HEIGHT + WoastsClient.config.wrapSpacing
+                }
+            }
+
+            Config.RenderCorner.DOWN_LEFT -> {
+                var x = WoastsClient.config.margin
+                var y = McClient.window.guiScaledHeight - CONTAINER_HEIGHT - WoastsClient.config.margin
+
+                val lines = enabled.chunked(WoastsClient.config.wrap)
+                lines.forEach { line ->
+                    line.forEach { widget ->
+                        widget.render(graphics, tickCounter, x, y)
+                        x += widget.containerWidth + WoastsClient.config.spacing
+                    }
+
+                    x = WoastsClient.config.margin
+                    y -= CONTAINER_HEIGHT + WoastsClient.config.wrapSpacing
+                }
+            }
+
+            Config.RenderCorner.DOWN_RIGHT -> {
+                var x = McClient.window.guiScaledWidth - WoastsClient.config.margin
+                var y = McClient.window.guiScaledHeight - CONTAINER_HEIGHT - WoastsClient.config.margin
+
+                val lines = enabled.chunked(WoastsClient.config.wrap)
+                lines.forEach { line ->
+                    line.forEachIndexed { index, widget ->
+                        x -= when(index) {
+                            0 -> widget.containerWidth
+                            else -> widget.containerWidth + WoastsClient.config.spacing
+                        }
+
+                        widget.render(graphics, tickCounter, x, y)
+                    }
+
+                    x = McClient.window.guiScaledWidth - WoastsClient.config.margin
+                    y -= CONTAINER_HEIGHT + WoastsClient.config.wrapSpacing
+                }
+            }
         }
     }
 

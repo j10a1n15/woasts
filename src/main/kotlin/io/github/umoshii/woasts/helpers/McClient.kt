@@ -1,5 +1,6 @@
 package io.github.umoshii.woasts.helpers
 
+import com.mojang.blaze3d.platform.Window
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.Font
 
@@ -15,4 +16,5 @@ object McClient {
         get() = Minecraft.getInstance()
 
     val font: Font = instance.font
+    val window: Window = instance.window
 }

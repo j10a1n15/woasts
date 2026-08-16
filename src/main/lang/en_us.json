@@ -95,6 +95,24 @@
                         "@": "Position Widget",
                         "isEnabled": "Enabled",
                         "color": "Color"
+                    },
+
+                    "fpsConfig": {
+                        "@": "FPS Widget",
+                        "isEnabled": "Enabled",
+
+                        "optimalFps": {
+                            "@": "Optimal FPS",
+                            "@Tooltip": [
+                                "Specifies the FPS value for widget coloring.",
+                                "",
+                                "Values below optimal FPS will be colored yellow.",
+                                "Values above optimal FPS will be colored green."
+                            ]
+                        },
+
+                        "greenFpsColor": "Green FPS Color",
+                        "yellowFpsColor": "Yellow FPS Color"
                     }
                 }
             }

@@ -1,5 +1,6 @@
 package io.github.umoshii.woasts
 
+import io.github.umoshii.woasts.commands.ConfigCommand
 import io.github.umoshii.woasts.config.Config
 import io.github.umoshii.woasts.widgets.WidgetRenderer
 import me.shedaniel.autoconfig.AutoConfig
@@ -14,5 +15,6 @@ object WoastsClient : ClientModInitializer {
         config = AutoConfig.getConfigHolder(Config::class.java).config
 
         WidgetRenderer.register()
+        ConfigCommand.register()
     }
 }

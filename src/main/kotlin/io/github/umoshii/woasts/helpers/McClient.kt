@@ -3,6 +3,7 @@ package io.github.umoshii.woasts.helpers
 import com.mojang.blaze3d.platform.Window
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.Font
+import net.minecraft.client.gui.screens.Screen
 import net.minecraft.client.multiplayer.ClientPacketListener
 import net.minecraft.client.player.LocalPlayer
 
@@ -28,4 +29,8 @@ object McClient {
 
     val player: LocalPlayer?
         get() = instance.player
+
+    val screen: Screen?
+        //~ if < 26.2 'instance.gui.screen()' -> 'instance.screen'
+        get() = instance.gui.screen()
 }

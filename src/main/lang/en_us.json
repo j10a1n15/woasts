@@ -56,12 +56,12 @@
 
                         "yellowPingRange": {
                             "@": "Yellow Ping Range",
-                            "@Tooltip": "Specifies the range of ping values for the yellow color.\n\nFollows the formula:\nFrom [Sum of previous values + 1] to [Value]"
+                            "@Tooltip": "Specifies the range of ping values for the yellow color.\n\nFollows the formula, where X is the sum of all previous values:\nFrom [X + 1] to [X + Value]"
                         },
 
                         "orangePingRange": {
                             "@": "Orange Ping Range",
-                            "@Tooltip": "Specifies the range of ping values for the orange color.\n\nFollows the formula:\nFrom [Sum of previous values + 1] to [Value]\n\nAll ping values after this range will result in the red ping color."
+                            "@Tooltip": "Specifies the range of ping values for the orange color.\n\nFollows the formula, where X is the sum of all previous values:\nFrom [X + 1] to [X + Value]\n\nAll ping values after this range will result in the red ping color."
                         },
 
                         "grayPingColor": "Gray Ping Color",

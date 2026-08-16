@@ -1,5 +1,10 @@
 package io.github.umoshii.woasts.utils
 
+/*
+    Uses the Catppuccino Frappe color palette
+    Licensed user MIT License, see CREDITS.md for more
+*/
+
 object ColorUtils {
     fun hexToArgb(hexColor: String): Int {
         val cleanHex = hexColor.removePrefix("#")
@@ -13,7 +18,15 @@ object ColorUtils {
         return (aa shl 24) or (rr shl 16) or (gg shl 8) or bb
     }
 
-    enum class Constants(val hex: Int) {
-        WHITE(hexToArgb("#FFFFFFFF"))
+    enum class CatppuccinColors(val hex: Int) {
+        RED(hexToArgb("#e78284ff")),
+        PEACH(hexToArgb("#ef9f76ff")),
+        YELLOW(hexToArgb("#e5c890ff")),
+        GREEN(hexToArgb("#a6d189ff")),
+        SKY(hexToArgb("#99d1dbff")),
+        SAPPHIRE(hexToArgb("#85c1dcff")),
+        LAVENDER(hexToArgb("#babbf1ff")),
+        BASE(hexToArgb("#303446ff")),
+        TEXT(hexToArgb("#c6d0f5ff"))
     }
 }

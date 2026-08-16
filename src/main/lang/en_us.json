@@ -51,17 +51,17 @@
 
                         "greenPingRange": {
                             "@": "Green Ping Range",
-                            "@Tooltip": "Specifies the range of ping values for the green color.\n\nFollows the following formula:\nFrom [1] to [Value]"
+                            "@Tooltip": "Specifies the range of ping values for the green color.\n\nFollows the formula:\nFrom [1] to [Value]"
                         },
 
                         "yellowPingRange": {
                             "@": "Yellow Ping Range",
-                            "@Tooltip": "Specifies the range of ping values for the yellow color.\n\nFollows the following formula:\nFrom [Sum of previous values + 1] to [Value]"
+                            "@Tooltip": "Specifies the range of ping values for the yellow color.\n\nFollows the formula:\nFrom [Sum of previous values + 1] to [Value]"
                         },
 
                         "orangePingRange": {
                             "@": "Orange Ping Range",
-                            "@Tooltip": "Specifies the range of ping values for the orange color.\n\nFollows the following formula:\nFrom [Sum of previous values + 1] to [Value]\nAll ping values after this range will result in the red ping color."
+                            "@Tooltip": "Specifies the range of ping values for the orange color.\n\nFollows the formula:\nFrom [Sum of previous values + 1] to [Value]\n\nAll ping values after this range will result in the red ping color."
                         },
 
                         "grayPingColor": "Gray Ping Color",
@@ -69,6 +69,12 @@
                         "yellowPingColor": "Yellow Ping Color",
                         "orangePingColor": "Orange Ping Color",
                         "redPingColor": "Red Ping Color"
+                    },
+
+                    "positionConfig": {
+                        "@": "Position Widget",
+                        "isEnabled": "Enabled",
+                        "color": "Color"
                     }
                 }
             }

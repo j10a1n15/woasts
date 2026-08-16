@@ -25,7 +25,7 @@ THE SOFTWARE.
 
 #
 
-**Catppuccino/Catppuccino Frappe Color Palette\
+**Catppuccin/Catppuccin Frappe Color Palette\
 MIT License**
 
 MIT License

@@ -1,7 +1,7 @@
 package io.github.umoshii.woasts.utils
 
 /*
-    Uses the Catppuccino Frappe color palette
+    Uses the Catppuccin Frappe color palette
     Licensed user MIT License, see CREDITS.md for more
 */
 
@@ -18,7 +18,7 @@ object ColorUtils {
         return (aa shl 24) or (rr shl 16) or (gg shl 8) or bb
     }
 
-    enum class CatppuccinoColors(val hex: Int) {
+    enum class CatppuccinColors(val hex: Int) {
         RED(hexToArgb("#e78284ff")),
         PEACH(hexToArgb("#ef9f76ff")),
         YELLOW(hexToArgb("#e5c890ff")),

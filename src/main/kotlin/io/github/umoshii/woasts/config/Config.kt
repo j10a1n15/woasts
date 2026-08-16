@@ -2,6 +2,7 @@ package io.github.umoshii.woasts.config
 
 import io.github.umoshii.woasts.Woasts
 import io.github.umoshii.woasts.config.sections.PingConfigSection
+import io.github.umoshii.woasts.config.sections.PositionConfigSection
 import me.shedaniel.autoconfig.ConfigData
 import me.shedaniel.autoconfig.annotation.Config
 import me.shedaniel.autoconfig.annotation.ConfigEntry
@@ -39,4 +40,7 @@ class Config : ConfigData {
 
     @ConfigEntry.Gui.CollapsibleObject
     var pingConfig: PingConfigSection = PingConfigSection()
+
+    @ConfigEntry.Gui.CollapsibleObject
+    var positionConfig: PositionConfigSection = PositionConfigSection()
 }

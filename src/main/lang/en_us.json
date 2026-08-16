@@ -8,6 +8,67 @@
                     "mainSwitch": {
                         "@": "Main Switch",
                         "@Tooltip": "Controls the rendering of all widgets."
+                    },
+
+                    "renderCorner": {
+                        "@": "Render Corner",
+                        "@Tooltip": "Specifies in which corner of the screen the widgets will be rendered.",
+
+                        "upLeft": "Upper-Left",
+                        "upRight": "Upper-Right",
+                        "downLeft": "Lower-Left",
+                        "downRight": "Lower-Right"
+                    },
+
+                    "margin": {
+                        "@": "Margin",
+                        "@Tooltip": "Specifies the margin from the edges of the screen."
+                    },
+
+                    "spacing": {
+                        "@": "Spacing",
+                        "@Tooltip": "Specifies the spacing between each widget."
+                    },
+
+                    "wrap": {
+                        "@": "Wrap",
+                        "@Tooltip": "Specifies the amount of widgets allowed on a single line before wrapping to a new one.\nSetting the value to zero or lower disables this feature."
+                    },
+
+                    "wrapSpacing": {
+                        "@": "Wrap Spacing",
+                        "@Tooltip": "Specifies the amount of spacing between each wrapped line."
+                    },
+
+                    "pingConfig": {
+                        "@": "Ping Widget",
+                        "isEnabled": "Enabled",
+
+                        "updateTime": {
+                            "@": "Update Time",
+                            "@Tooltip": "Specifies the amount of time (in seconds) between each ping update."
+                        },
+
+                        "greenPingRange": {
+                            "@": "Green Ping Range",
+                            "@Tooltip": "Specifies the range of ping values for the green color.\n\nFollows the following formula:\nFrom [1] to [Value]"
+                        },
+
+                        "yellowPingRange": {
+                            "@": "Yellow Ping Range",
+                            "@Tooltip": "Specifies the range of ping values for the yellow color.\n\nFollows the following formula:\nFrom [Sum of previous values + 1] to [Value]"
+                        },
+
+                        "orangePingRange": {
+                            "@": "Orange Ping Range",
+                            "@Tooltip": "Specifies the range of ping values for the orange color.\n\nFollows the following formula:\nFrom [Sum of previous values + 1] to [Value]\nAll ping values after this range will result in the red ping color."
+                        },
+
+                        "grayPingColor": "Gray Ping Color",
+                        "greenPingColor": "Green Ping Color",
+                        "yellowPingColor": "Yellow Ping Color",
+                        "orangePingColor": "Orange Ping Color",
+                        "redPingColor": "Red Ping Color"
                     }
                 }
             }

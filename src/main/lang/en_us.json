@@ -32,7 +32,10 @@
 
                     "wrap": {
                         "@": "Wrap",
-                        "@Tooltip": "Specifies the amount of widgets allowed on a single line before wrapping to a new one.\nSetting the value to zero or lower disables this feature."
+                        "@Tooltip": [
+                            "Specifies the number of widgets allowed on a single line before wrapping.",
+                            "Setting the value to zero or lower disables this feature."
+                        ]
                     },
 
                     "wrapSpacing": {
@@ -51,17 +54,34 @@
 
                         "greenPingRange": {
                             "@": "Green Ping Range",
-                            "@Tooltip": "Specifies the range of ping values for the green color.\n\nFollows the formula:\nFrom [1] to [Value]"
+                            "@Tooltip": [
+                                "Specifies the range of ping values for the green color.",
+                                "",
+                                "Follows the formula:",
+                                "From [1] to [Value]"
+                            ]
                         },
 
                         "yellowPingRange": {
                             "@": "Yellow Ping Range",
-                            "@Tooltip": "Specifies the range of ping values for the yellow color.\n\nFollows the formula, where X is the sum of all previous values:\nFrom [X + 1] to [X + Value]"
+                            "@Tooltip": [
+                                "Specifies the range of ping values for the yellow color.",
+                                "",
+                                "Follows the formula, where X is the sum of all previous values:",
+                                "From [X + 1] to [X + Value]"
+                            ]
                         },
 
                         "orangePingRange": {
                             "@": "Orange Ping Range",
-                            "@Tooltip": "Specifies the range of ping values for the orange color.\n\nFollows the formula, where X is the sum of all previous values:\nFrom [X + 1] to [X + Value]\n\nAll ping values after this range will result in the red ping color."
+                            "@Tooltip": [
+                                "Specifies the range of ping values for the orange color.",
+                                "",
+                                "Follows the formula, where X is the sum of all previous values:",
+                                "From [X + 1] to [X + Value]",
+                                "",
+                                "All ping values after this range will result in the red ping color."
+                            ]
                         },
 
                         "grayPingColor": "Gray Ping Color",

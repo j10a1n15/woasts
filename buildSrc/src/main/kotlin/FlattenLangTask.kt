@@ -1,7 +1,9 @@
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.google.gson.JsonArray
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
+import com.google.gson.JsonPrimitive
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.DirectoryProperty
 import org.gradle.api.provider.Property
@@ -87,11 +89,10 @@ abstract class FlattenLangTask : DefaultTask() {
             return
         }
 
-        if (key.substringAfterLast('.') == marker) {
-            result.add(key.substringBeforeLast('.'), entry)
-        } else {
-            result.add(key, entry)
-        }
+        val prefix = key.removeSuffix(".$marker")
+        val value  = if (entry is JsonArray) JsonPrimitive(entry.joinToString("\n") { it.asString }) else entry
+
+        result.add(prefix, value)
     }
 }
 

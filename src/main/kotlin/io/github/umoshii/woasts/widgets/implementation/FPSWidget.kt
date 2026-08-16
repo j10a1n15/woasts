@@ -1,0 +1,27 @@
+package io.github.umoshii.woasts.widgets.implementation
+
+import io.github.umoshii.woasts.WoastsClient
+import io.github.umoshii.woasts.helpers.McClient
+import io.github.umoshii.woasts.utils.FontUtils
+import io.github.umoshii.woasts.widgets.Widget
+import net.minecraft.network.chat.MutableComponent
+
+object FPSWidget : Widget() {
+    override val isEnabled: Boolean
+        get() = true
+
+    override fun getRenderColor(): Int {
+        return when(McClient.instance.fps) {
+            in 0..<WoastsClient.config.fpsConfig.optimalFps -> WoastsClient.config.fpsConfig.yellowFpsColor
+            else -> WoastsClient.config.fpsConfig.greenFpsColor
+        }
+    }
+
+    override fun getRenderIcon(): MutableComponent {
+        return FontUtils.Icons.FPS.component
+    }
+
+    override fun getRenderValue(): String {
+        return "${McClient.instance.fps} FPS"
+    }
+}

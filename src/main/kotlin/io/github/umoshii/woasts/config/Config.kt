@@ -1,6 +1,7 @@
 package io.github.umoshii.woasts.config
 
 import io.github.umoshii.woasts.Woasts
+import io.github.umoshii.woasts.config.sections.FPSConfigSection
 import io.github.umoshii.woasts.config.sections.PingConfigSection
 import io.github.umoshii.woasts.config.sections.PositionConfigSection
 import me.shedaniel.autoconfig.ConfigData
@@ -43,4 +44,7 @@ class Config : ConfigData {
 
     @ConfigEntry.Gui.CollapsibleObject
     var positionConfig: PositionConfigSection = PositionConfigSection()
+
+    @ConfigEntry.Gui.CollapsibleObject
+    var fpsConfig: FPSConfigSection = FPSConfigSection()
 }

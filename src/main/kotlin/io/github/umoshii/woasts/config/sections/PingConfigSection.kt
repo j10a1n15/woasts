@@ -22,17 +22,17 @@ class PingConfigSection {
     var orangePingRange: Long = 100L
 
     @ConfigEntry.ColorPicker(allowAlpha = true)
-    var grayPingColor: Int = ColorUtils.hexToArgb("#6d737aff")
+    var grayPingColor: Int = ColorUtils.hexToArgb("#bcc7d4ff")
 
     @ConfigEntry.ColorPicker(allowAlpha = true)
-    var greenPingColor: Int = ColorUtils.hexToArgb("#70ff4dff")
+    var greenPingColor: Int = ColorUtils.hexToArgb("#9dff85ff")
 
     @ConfigEntry.ColorPicker(allowAlpha = true)
-    var yellowPingColor: Int = ColorUtils.hexToArgb("#f9ff4dff")
+    var yellowPingColor: Int = ColorUtils.hexToArgb("#fdff85ff")
 
     @ConfigEntry.ColorPicker(allowAlpha = true)
-    var orangePingColor: Int = ColorUtils.hexToArgb("#ffb84dff")
+    var orangePingColor: Int = ColorUtils.hexToArgb("#ffce85ff")
 
     @ConfigEntry.ColorPicker(allowAlpha = true)
-    var redPingColor: Int = ColorUtils.hexToArgb("#ff624dff")
+    var redPingColor: Int = ColorUtils.hexToArgb("#ff9d85ff")
 }

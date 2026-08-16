@@ -2,7 +2,7 @@
     "text": {
         "autoconfig": {
             "woasts": {
-                "title": "Woasts!",
+                "title": "Woasts! §7(by umoshii)§r",
 
                 "option": {
                     "mainSwitch": {
@@ -34,7 +34,7 @@
                         "@": "Wrap",
                         "@Tooltip": [
                             "Specifies the number of widgets allowed on a single line before wrapping.",
-                            "Setting the value to zero or lower disables this feature."
+                            "§7Setting the value to zero or lower disables this feature.§r"
                         ]
                     },
 
@@ -57,8 +57,8 @@
                             "@Tooltip": [
                                 "Specifies the range of ping values for the green color.",
                                 "",
-                                "Follows the formula:",
-                                "From [1] to [Value]"
+                                "§7Follows the formula:",
+                                "From [1] to [Value]§r"
                             ]
                         },
 
@@ -67,8 +67,8 @@
                             "@Tooltip": [
                                 "Specifies the range of ping values for the yellow color.",
                                 "",
-                                "Follows the formula, where X is the sum of all previous values:",
-                                "From [X + 1] to [X + Value]"
+                                "§7Follows the formula, where X is the sum of all previous values:",
+                                "From [X + 1] to [X + Value]§r"
                             ]
                         },
 
@@ -77,10 +77,10 @@
                             "@Tooltip": [
                                 "Specifies the range of ping values for the orange color.",
                                 "",
-                                "Follows the formula, where X is the sum of all previous values:",
+                                "§7Follows the formula, where X is the sum of all previous values:",
                                 "From [X + 1] to [X + Value]",
                                 "",
-                                "All ping values after this range will result in the red ping color."
+                                "All ping values after this range will result in the red ping color.§r"
                             ]
                         },
 
@@ -106,8 +106,8 @@
                             "@Tooltip": [
                                 "Specifies the FPS value for widget coloring.",
                                 "",
-                                "Values below optimal FPS will be colored yellow.",
-                                "Values above optimal FPS will be colored green."
+                                "§7Values below optimal FPS will be colored yellow.",
+                                "Values above optimal FPS will be colored green.§r"
                             ]
                         },
 

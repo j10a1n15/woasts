@@ -8,7 +8,7 @@ import net.minecraft.network.chat.MutableComponent
 
 object FPSWidget : Widget() {
     override val isEnabled: Boolean
-        get() = true
+        get() = WoastsClient.config.fpsConfig.isEnabled
 
     override fun getRenderColor(): Int {
         return when(McClient.instance.fps) {

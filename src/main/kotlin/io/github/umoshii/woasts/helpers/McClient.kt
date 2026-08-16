@@ -4,6 +4,7 @@ import com.mojang.blaze3d.platform.Window
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.Font
 import net.minecraft.client.multiplayer.ClientPacketListener
+import net.minecraft.client.player.LocalPlayer
 
 /*
     Implementation based on @SkyblockAPI/SkyblockAPI
@@ -24,4 +25,7 @@ object McClient {
 
     val connection: ClientPacketListener?
         get() = instance.connection
+
+    val player: LocalPlayer?
+        get() = instance.player
 }

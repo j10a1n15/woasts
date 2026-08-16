@@ -19,10 +19,8 @@ object PositionWidget : Widget() {
     }
 
     override fun getRenderValue(): String {
-        val blockPos = McClient.instance.player?.blockPosition()
-
-        blockPos?.let {
-            return "${blockPos.x} ${blockPos.y} ${blockPos.z}"
+        McClient.player?.let { player ->
+            return "${player.blockX} ${player.blockY} ${player.blockZ}"
         }
 
         return "? ? ?"

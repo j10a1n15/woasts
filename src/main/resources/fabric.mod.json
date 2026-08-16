@@ -16,7 +16,7 @@
 
 	"license": "Apache-2.0",
 	"icon": "assets/woasts/icon.png",
-	"environment": "*",
+	"environment": "client",
 
 	"entrypoints": {
 		"main": [
@@ -52,7 +52,7 @@
 
 		"fabric-api": "*",
 		"fabric-language-kotlin": "*",
-		"cloth-config": "${deps_cloth_config}"
+		"cloth-config": ">=${deps_cloth_config}"
 	},
 
 	"suggests": {

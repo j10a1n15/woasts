@@ -10,8 +10,8 @@ class FPSConfigSection {
     var optimalFps: Int = 60
 
     @ConfigEntry.ColorPicker(allowAlpha = true)
-    var greenFpsColor: Int = ColorUtils.hexToArgb("#9dff85ff")
+    var greenFpsColor: Int = ColorUtils.CatppuccinoColors.GREEN.hex
 
     @ConfigEntry.ColorPicker(allowAlpha = true)
-    var yellowFpsColor: Int = ColorUtils.hexToArgb("#fdff85ff")
+    var yellowFpsColor: Int = ColorUtils.CatppuccinoColors.YELLOW.hex
 }

@@ -7,5 +7,5 @@ class PositionConfigSection {
     var isEnabled: Boolean = true
 
     @ConfigEntry.ColorPicker(allowAlpha = true)
-    var color: Int = ColorUtils.hexToArgb("#dbe8ffff")
+    var color: Int = ColorUtils.CatppuccinoColors.TEXT.hex
 }

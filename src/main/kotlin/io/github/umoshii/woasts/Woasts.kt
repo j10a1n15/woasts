@@ -11,6 +11,6 @@ object Woasts : ModInitializer {
 	fun id(path: String): Identifier = Identifier.fromNamespaceAndPath(MOD_ID, path)
 
 	override fun onInitialize() {
-		LOGGER.info("Hello Fabric world!")
+		LOGGER.info("Woof!")
 	}
 }

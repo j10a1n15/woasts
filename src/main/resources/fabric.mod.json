@@ -42,7 +42,7 @@
 	},
 
 	"mixins": [
-		"template.mixins.json"
+        "woasts.mixins.json"
 	],
 
 	"depends": {

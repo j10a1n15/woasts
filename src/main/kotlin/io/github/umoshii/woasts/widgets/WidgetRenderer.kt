@@ -20,6 +20,9 @@ object WidgetRenderer {
 
     @Suppress("DuplicatedCode")
     private fun render(graphics: GuiGraphicsExtractor, tickCounter: DeltaTracker) {
+        //~ if < 26.2 'gui.hud.isHidden' -> 'options.hideGui'
+        if (McClient.instance.gui.hud.isHidden) return
+
         if (!WoastsClient.config.mainSwitch) return
 
         val enabled = widgets.filterNot { !it.isEnabled }
